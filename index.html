@@ -10,19 +10,6 @@
         <link rel="stylesheet" href="/css/site.css" />
 
         <script src="https://kit.fontawesome.com/1194b99adb.js"></script>
-        <script src="https://www.google.com/recaptcha/api.js?render=6LfTaKsUAAAAAD6urBFFzxqR7p8MUeY1pb1odZFu"></script>
-        <script>   
-            grecaptcha.ready(function() {
-                grecaptcha.execute("6LfTaKsUAAAAAD6urBFFzxqR7p8MUeY1pb1odZFu", {action: "home"});
-            });
-
-            function downloadResume() {
-                grecaptcha.execute("6LfTaKsUAAAAAD6urBFFzxqR7p8MUeY1pb1odZFu", {action: 'download_resume'}).then(function(token) {
-                    const url = window.location + "resume?recaptcha=" + token;
-                    window.location = url;
-                });
-            }
-        </script>
     </head>
     <body>
         <header>
@@ -39,7 +26,6 @@
             <nav class="connect-nav">
                 <a href="https://www.linkedin.com/in/justin-fouts" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin"></i> Linked In</a>
                 <a href="https://www.github.com/JFouts" rel="noopener noreferrer" target="_blank"><i class="fab fa-github-square"></i> GitHub</a>
-                <a onclick="downloadResume()"><i class="fas fa-file-alt"></i> Resume</a>
             </nav>
             <div class="burger"><i class="fas fa-bars"></i></div>
         </header>
@@ -219,7 +205,6 @@
             <nav class="connect-nav">
                 <a href="https://www.linkedin.com/in/justin-fouts" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin"></i> Linked In</a>
                 <a href="https://www.github.com/JFouts" rel="noopener noreferrer" target="_blank"><i class="fab fa-github-square"></i> GitHub</a>
-                <a href="/resume"><i class="fas fa-file-alt"></i> Resume</a>
             </nav>
         </footer>
         
