@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Profile - Justin Fouts</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/site.css" />
+
+        <script src="https://kit.fontawesome.com/1194b99adb.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js?render=6LfTaKsUAAAAAD6urBFFzxqR7p8MUeY1pb1odZFu"></script>
+        <script>   
+            grecaptcha.ready(function() {
+                grecaptcha.execute("6LfTaKsUAAAAAD6urBFFzxqR7p8MUeY1pb1odZFu", {action: "home"});
+            });
+
+            function downloadResume() {
+                grecaptcha.execute("6LfTaKsUAAAAAD6urBFFzxqR7p8MUeY1pb1odZFu", {action: 'download_resume'}).then(function(token) {
+                    const url = window.location + "resume?recaptcha=" + token;
+                    window.location = url;
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <a class="header-link" href="/">
+                <img class="header-logo" src="/logo.png">
+                <div class="header-title">Justin Fouts</div>
+                <div class="header-subtitle">Software Devloper</div>    
+            </a>
+            <nav class="main-nav">
+                <a href="/#projects">Projects</a>
+                <a href="/#companies">Companies</a>
+                <a href="/#education">Education</a>
+            </nav>
+            <nav class="connect-nav">
+                <a href="https://www.linkedin.com/in/justin-fouts" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin"></i> Linked In</a>
+                <a href="https://www.github.com/JFouts" rel="noopener noreferrer" target="_blank"><i class="fab fa-github-square"></i> GitHub</a>
+                <a onclick="downloadResume()"><i class="fas fa-file-alt"></i> Resume</a>
+            </nav>
+            <div class="burger"><i class="fas fa-bars"></i></div>
+        </header>
+
+        <main role="main">
+                
+            <section class="hero">
+                <img class="desktop" src="https://via.placeholder.com/1280x300">
+                <img class="mobile" src="https://via.placeholder.com/300x200">
+            </section>
+
+            <section>
+                <p class="quote">
+                    I am a Software Developer who excels at creating eCommerence and Marketing web sites and applications. I focus extensively on providing value and quality in everything I deliver.
+                    <span class="sig">Justin Fouts</span>
+                </p>
+            </section>
+            <section>
+                <a name="projects"></a>
+                <h3>Projects</h3>
+                <ul class="listing">
+
+            <li>
+                <div class="listing-image" style="background-image: url(https://ak3.picdn.net/shutterstock/videos/1845043/thumb/11.jpg)"></div>
+                <h4>
+                    Aon Headless CMS
+                </h4>
+                <p>
+                    Using Kentico CMS as the backend, I created a created a C# REST API to act as a headless CMS for our client, Aon. This allowed for us to take full advantage of the Admin UI that Kentico provides to quickly create a rich API. Using a headless solution allows for multiple Front End applications to consume the Content, such as a website and a mobile app. I created an Integration Test suite to ensure the quality of the code that was delivered.
+                </p>        
+
+                
+            <ul class="badge-list">
+                    <li><img src="/icons/csharp.svg" alt="csharp"></li>
+                    <li><img src="/icons/kentico.svg" alt="kentico"></li>
+            </ul>
+            
+            </li>
+            <li>
+                <div class="listing-image" style="background-image: url(http://www.broan-nutone.com/wp-content/uploads/2018/05/Range-Hoods-300x300.jpg)"></div>
+                <h4>
+                    Broan NuTone Promotional Microsite
+                </h4>
+                <p>
+                    I am building a Promotional Microsite that will feature a handful of products that are sold under the brand name. I have created product pages that show the detailed spec of these products along with Reviews and Questions and Answers, by integrating with Bazaar Voice. Kentico CMS was used as the backend to setup the content model for their Products and marketing pages. .NET MVC was used for the Front End of the website.
+                </p>        
+
+                
+            <ul class="badge-list">
+                    <li><img src="/icons/csharp.svg" alt="csharp"></li>
+                    <li><img src="/icons/html5.svg" alt="html5"></li>
+                    <li><img src="/icons/kentico.svg" alt="kentico"></li>
+            </ul>
+
+            </li>
+            <li>
+                <div class="listing-image" style="background-image: url(https://assets-us-01.kc-usercontent.com/04049059-9f97-00fa-b634-0afc144f58a8/bdd27130-3984-430b-8523-01ed55e188c6/46601-B-featured-image.jpg)"></div>
+                <h4>
+                    It Works! Redesigned Corporate Website
+                </h4>
+                <p>
+                    The It Works! Corporate Website is an MLM eCommerce site. I built the redesigned website using Angular as the Front End and .NET Core Microservices as a Backend. Kentico Cloud was used as a CMS to manage content and improve SEO. I built a Front End package to consume the Kentico Cloud headless API. I used Atomic Design and Semantic HTML to allow the Content and Model to be separated from the UI Design.
+                </p>        
+
+                
+            <ul class="badge-list">
+                    <li><img src="/icons/dotnetcore.svg" alt="dotnetcore"></li>
+                    <li><img src="/icons/angular.svg" alt="angular"></li>
+                    <li><img src="/icons/html5.svg" alt="html5"></li>
+                    <li><img src="/icons/kentico.svg" alt="kentico"></li>
+            </ul>
+
+            </li>
+            <li>
+                <div class="listing-image" style="background-image: url(https://assets-us-01.kc-usercontent.com/04049059-9f97-00fa-b634-0afc144f58a8/f470db9b-87ac-458a-af50-d710ef7ab284/category-image-clearance.jpg)"></div>
+                <h4>
+                    It Works! Promotion Engine
+                </h4>
+                <p>
+                    I architected and built a tool to apply BOGO and Discount promotions to orders using .Net Core Microservices. Discounts would automatically be applied to qualifying orders. Auditing was added so Business Intelligence could be used to track effectiveness and target promotions. I created an Admin UI so that the Marketing team could manage and create promotions and discounts without code changes.
+                </p>        
+
+                
+            <ul class="badge-list">
+                    <li><img src="/icons/dotnetcore.svg" alt="dotnetcore"></li>
+                    <li><img src="/icons/csharp.svg" alt="csharp"></li>
+                    <li><img src="/icons/sql.svg" alt="sql"></li>
+            </ul>
+
+            </li>    </ul>
+            </section>
+
+
+            <section>
+                <p class="quote">
+                    Justin is both a highly skilled software author and a caring / commit[ted] manager. He was a major contributor to our entire development team, leading in architecture and SDLC process improvement. As a developing manager, his care for the professional and personal lives of those on his team was apparent. Justin has a keen ability to focus on the long term business value and push through the day to day noise that we always encounter.
+                    <span class="sig">Eric Olinger (Director of Development at It Works!)</span>
+                </p>
+            </section>
+            <section>
+                <a name="projects"></a>
+                <h3>Companies</h3>
+                <ul class="listing">
+
+            <li>
+                <div class="listing-image" style="background-image: url(https://media.glassdoor.com/lst2x/471559/bluemodus-office.jpg)"></div>
+                <h4>
+                    Blue Modus
+                </h4>
+                <p>
+                    At BlueModus I am a senior developer that works with multiple clients and delivers solutions that meet their needs. Primarily I work with marketing companies that are looking for an updated website that will benefit from a powerful CMS, SEO, Cloud Hosting, etc. As a Kentico Certified Developer I am able to provide streamlined solution delivery using Kentico CMS    
+                </p>
+
+                
+            <ul class="badge-list">
+                    <li><img src="/icons/csharp.svg" alt="csharp"></li>
+                    <li><img src="/icons/kentico.svg" alt="kentico"></li>
+                    <li><img src="/icons/sql.svg" alt="sql"></li>
+            </ul>
+
+            </li>
+            <li>
+                <div class="listing-image" style="background-image: url(https://www.83degreesmedia.com/galleries/iw_headquarters_front.jpg)"></div>
+                <h4>
+                    It Works!
+                </h4>
+                <p>
+                    As a Software Development Manager as It Works! I managed frontend and backend developers across three Agile Scrum teams. I Developed .NET Core REST microservices and Angular front-end applications. I participated in architectural design and review discussions to create and implement an organizational vision for our software architecture.    
+                </p>
+
+                
+            <ul class="badge-list">
+                    <li><img src="/icons/csharp.svg" alt="csharp"></li>
+                    <li><img src="/icons/dotnetcore.svg" alt="dotnetcore"></li>
+                    <li><img src="/icons/angular.svg" alt="angular"></li>
+                    <li><img src="/icons/sql.svg" alt="sql"></li>
+            </ul>
+
+            </li>
+            <li>
+                <div class="listing-image" style="background-image: url(https://www.digitalcommerce360.com/wp-content/uploads/2019/04/Verizon-building-shutterstock_1205088154.jpg)"></div>
+                <h4>
+                    Verizon
+                </h4>
+                <p>
+                    At Verizon I was a Lead backend developer for Wireless Point of Sale. I was resposible for writting C code and SQL queries using C, Oracle DB, and Pro*C. One major project I lead was a trasition of SED, their discounting application, into microservices.    
+                </p>
+
+                
+            <ul class="badge-list">
+                    <li><img src="/icons/c.svg" alt="c"></li>
+                    <li><img src="/icons/sql.svg" alt="sql"></li>
+            </ul>
+
+            </li>    </ul>
+            </section>
+
+            <section>
+                <a name="projects"></a>
+                <h3>Education</h3>
+                <ul class="listing">
+
+            <li>
+                <div class="listing-image" style="background-image: url(https://martaguide.files.wordpress.com/2009/10/techtowersign.jpg)"></div>
+                <h4>Georgia Institute of Technology</h4>
+                <h5>Master&#x27;s in Computer Science</h5>
+            </li>
+            <li>
+                <div class="listing-image" style="background-image: url(http://www.greatcollegedeals.net/wp-content/uploads/2015/07/University-of-South-Florida-Sarasota-Manatee-1024x682.jpg)"></div>
+                <h4>University of South Florida</h4>
+                <h5>Bachelor&#x27;s in Computer Engineering</h5>
+            </li>    </ul>
+            </section>
+        </main>
+
+        <footer>
+            <nav class="connect-nav">
+                <a href="https://www.linkedin.com/in/justin-fouts" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin"></i> Linked In</a>
+                <a href="https://www.github.com/JFouts" rel="noopener noreferrer" target="_blank"><i class="fab fa-github-square"></i> GitHub</a>
+                <a href="/resume"><i class="fas fa-file-alt"></i> Resume</a>
+            </nav>
+        </footer>
+        
+        <script src="/lib/jquery/dist/jquery.js"></script>
+        <script src="/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0"></script>
+    </body>
+</html>
